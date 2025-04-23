@@ -1,0 +1,15 @@
+#pragma once
+#include <QWidget>
+
+class BMIGraphWidget : public QWidget {
+    Q_OBJECT
+public:
+    explicit BMIGraphWidget(QWidget *parent = nullptr);
+    void setBMI(double bmiValue);
+
+protected:
+    void paintEvent(QPaintEvent *event) override;
+
+private:
+    double bmi = 0.0;
+};
